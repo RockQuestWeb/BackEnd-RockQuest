@@ -51,3 +51,4 @@ prizeController.post = async function(req, res) {
         });
     }
 }
+module.exports = prizeController;

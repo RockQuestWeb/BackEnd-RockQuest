@@ -1,7 +1,6 @@
-const { ObjectID, Long } = require('mongodb');
-const mongose = require('mongoose');
-const {ObjectID} = require('mongoose');
-const Program = require('./user/program');
+const {ObjectId} = require('mongodb');
+const mongoose = require('mongoose');
+const programs = require('./program.model');
 const {Schema} = mongoose;
 
 //SCHEMA OF THE USER COLLECTION
@@ -10,8 +9,8 @@ const userSchema = new Schema({
     name: String,
     mail: String,
     password: String,
-    universityCode: Long,
-    program: String, //cambiar
+    universityCode: Number,
+    programs: [{type: ObjectId, ref: programs}],
     tickets: String
 });
 

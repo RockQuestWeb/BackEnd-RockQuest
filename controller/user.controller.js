@@ -50,3 +50,4 @@ userController.post = async function(req, res) {
         });
     }
 }
+module.exports = userController;

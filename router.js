@@ -61,7 +61,7 @@ router.post('/program', ProgramController.post);
 
 //PROGRESS
 router.get('/progress', ProgressController.getAll);
-router.get('/progress/:progressId',ProgressController.getOneById);
+router.get('/progress/:progressId', ProgressController.getOneById);
 router.post('/progress', ProgressController.post);
 
 //QUEST
