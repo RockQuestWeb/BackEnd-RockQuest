@@ -40,6 +40,8 @@ progressController.post = async function(req,res) {
                 response.status(500).send({
                     message: 'SOME ERROR OCURRED WHEN INSERT A NEW PROGRESS'
                 });
+            }else {
+                res.send(response);
             }
         });
     }else {

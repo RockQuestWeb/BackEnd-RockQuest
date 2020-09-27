@@ -10,26 +10,26 @@ const QuestController = require('./controller/quest.controller');
 //CATEGORY
 router.get('/category', CategoryController.getAll);
 router.get('/category/:categoryId',CategoryController.getOneById);
-router.get('/category', CategoryController.post);
+router.post('/category', CategoryController.post);
 
 //CITY
 router.get('/city', CityController.getAll);
 router.get('/city/:cityId',CityController.getOneById);
-router.get('/city', CityController.post);
+router.post('/city', CityController.post);
 
 //MISSION
 router.get('/mission', MissionController.getAll);
 router.get('/mission/:missionId',MissionController.getOneById);
-router.get('/mission', MissionController.post);
+router.post('/mission', MissionController.post);
 
 //PROGRESS
 router.get('/progress', ProgressController.getAll);
 router.get('/progress/:progressId',ProgressController.getOneById);
-router.get('/progress', ProgressController.post);
+router.post('/progress', ProgressController.post);
 
 //QUEST
 router.get('/quest', QuestController.getAll);
 router.get('/quest/:questId',QuestController.getOneById);
-router.get('/quest', QuestController.post);
+router.post('/quest', QuestController.post);
 
 module.exports = router;

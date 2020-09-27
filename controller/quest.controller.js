@@ -37,9 +37,11 @@ questController.post = async function(req,res) {
         const newProgress = new QuestSchema(req.body);
         newProgress.save((err,response)=>{
             if(err){
-                response.status(500).send({
+                res.send({
                     message: 'SOME ERROR OCURRED WHEN INSERT A NEW QUEST'
                 });
+            }else {
+                res.send(response);
             }
         });
     }else {
