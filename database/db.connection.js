@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const dbconfig = require('./db.config');
+//const dbconfig = require('./db.config');
 const uri = "mongodb+srv://administrador:RockQuest123@cluster0.lx7aj.gcp.mongodb.net/DBRockQuest?retryWrites=true&w=majority";
 const db = mongoose.connection;
 

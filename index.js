@@ -1,6 +1,7 @@
 //DECLARATIONS
 const cors = require('cors');
 const express = require('express');
+const Mongoose  = require('mongoose');
 const app = express();
 const router = require('./router');
 require('./database/db.connection');
@@ -17,5 +18,9 @@ app.use('/', router);
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log("SERVER IS LISTEN ON PORT:" , PORT);
+});
+
+Mongoose.connection.on('open',_=>{
+    console.log('DATABASE IS CONENECTED');
 });
 
