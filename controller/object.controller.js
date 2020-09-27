@@ -50,3 +50,4 @@ objectController.post = async function(req, res) {
         });
     }
 }
+module.exports = objectController;

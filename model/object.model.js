@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const mongoose = require('mongoose');
 const { ObjectId } = require('mongoose');
 const {Schema} = mongoose;
 

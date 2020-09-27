@@ -49,3 +49,4 @@ programController.post = async function (req, res){
         });
     }
 }
+module.exports = programController;

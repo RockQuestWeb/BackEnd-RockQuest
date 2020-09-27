@@ -32,7 +32,7 @@ npcController.getOneById = async function(req, res) {
 }
 
 //CREATE AND SAVE A NEW ACHIEVEMENT
-achievementController.post = async function(req, res) {
+npcController.post = async function(req, res) {
     if(req.body){
         console.log(req.body);
         const newNpc = new npcSchema(req.body);
@@ -50,3 +50,5 @@ achievementController.post = async function(req, res) {
         });
     }
 }
+
+module.exports = npcController;

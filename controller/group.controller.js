@@ -1,5 +1,4 @@
 require('../database/db.connection');
-const { response } = require('express');
 const GroupSchema = require('../model/group.model');
 
 const groupController = {};
@@ -51,3 +50,5 @@ groupController.post = async function(req, res) {
         });
     }
 }
+
+module.exports = groupController;
