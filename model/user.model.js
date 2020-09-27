@@ -1,9 +1,9 @@
 const {ObjectId} = require('mongodb');
+const bcrypt = require('bcrypt-nodejs');
 const mongoose = require('mongoose');
 const programs = require('./program.model');
 const {Schema} = mongoose;
 const ProgressSchema = require('./progress.model');
-
 //SCHEMA OF THE USER COLLECTION
 const userSchema = new Schema({
     name: String,
