@@ -1,0 +1,30 @@
+{
+  "name": "backend-rockquest",
+  "version": "1.0.0",
+  "description": "API  de funcionalidades, para ROCK QUEST",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RockQuestWeb/BackEnd-RockQuest.git"
+  },
+  "keywords": [
+    "Rock",
+    "Quest",
+    "API"
+  ],
+  "author": "Johan Nicolas Soler Hernandez, Danny Jersson Ochoa Peralta, Freddy Santiago Patarroyo Fernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RockQuestWeb/BackEnd-RockQuest/issues"
+  },
+  "homepage": "https://github.com/RockQuestWeb/BackEnd-RockQuest#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.7"
+  }
+}
