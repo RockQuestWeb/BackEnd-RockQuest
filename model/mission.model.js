@@ -1,16 +1,18 @@
 const { ObjectId } = require('mongodb');
 const mongoose = require('mongoose');
 const categorySchema = require('./category.model');
+const NPCSchema = require('./npc.model');
+const ObjectSchema = require('./object.model');
 const { Schema } = mongoose;
 
 //SCHEME OF THE MISSION COLLECTION
 const missionSchema = new Schema ({
     creator: String,
     title: String,
-    NPC: String,
     mechanical: String,
-    object: String,
     reward: String,
+    NPC: {type: ObjectId, ref: NPCSchema},
+    object: {type: ObjectId, ref: ObjectSchema},
     category: {type: ObjectId, ref: categorySchema}
 });
 
