@@ -6,7 +6,6 @@ const {Schema} = mongoose;
 const objectSchema = new Schema({
     name: String,
     image: String,
-    mission: String //corregir
 });
 
 module.exports = mongoose.model('objects', objectSchema);

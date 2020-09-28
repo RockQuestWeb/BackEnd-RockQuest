@@ -14,6 +14,8 @@ const PrizeController = require('./controller/prize.controller');
 const ProgramController = require('./controller/program.controller');
 const UserController = require('./controller/user.controller');
 
+router.get('/', UserController.hello);
+
 //ACHIEVEMENT
 router.get('/achievement', AchievementController.getAll);
 router.get('/category/:achievementId',AchievementController.getOneById);

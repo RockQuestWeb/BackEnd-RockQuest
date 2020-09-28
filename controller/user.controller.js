@@ -4,6 +4,11 @@ const UserSchema = require('../model/user.model');
 
 const userController = {};
 
+//RETURN A MENSSAGE
+userController.hello = async function(req,res){
+    res.send('HOLA! bienvenido a ROCK QUEST BackEnd rutas: /achievement -/category -/city -/group -/mission -/npc -/object -/prize -/program -/progress -/quest -/user');
+}
+
 //RETURN ALL USER
 userController.getAll = async function(req, res) {
     try {
@@ -35,12 +40,14 @@ userController.getOneById = async function(req, res) {
 userController.post = async function(req, res) {
     if(req.body){
         console.log(req.body);
-        const newUser = new userSchema(req.body);
+        const newUser = new UserSchema(req.body);
         newUser.save((err, response) =>{
             if(err){
                 response.status(500).send({
                     message: 'SOME ERROR OCURRED WHEN INSERT A NEW USER'
                 });
+            }else {
+                res.send(response);
             }
         });
     } else {

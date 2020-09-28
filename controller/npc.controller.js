@@ -36,11 +36,13 @@ npcController.post = async function(req, res) {
     if(req.body){
         console.log(req.body);
         const newNpc = new npcSchema(req.body);
-        newAchievement.save((err, response) => {
+        newNpc.save((err, response) => {
             if(err){
                 response.status(500).send({
                     message: 'SOME ERROR OCURRED WHEN INSERT A NEW CATEGORY'
                 });
+            }else {
+                res.send(response);
             }
         });
     } else {
