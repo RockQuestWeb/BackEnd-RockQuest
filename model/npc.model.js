@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const { ObjectId } = require('mongoose');
 const Mission = require('./mission.model');
 const {Schema} = mongoose;
+const Mission = require('./mission.model');
 
 //SCHEMA OF THE USER COLLECTION
 const npcSchema = new Schema({

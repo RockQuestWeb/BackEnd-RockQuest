@@ -1,17 +1,19 @@
 const {ObjectId} = require('mongodb');
+const bcrypt = require('bcrypt-nodejs');
 const mongoose = require('mongoose');
 const programs = require('./program.model');
 const {Schema} = mongoose;
-
+const ProgressSchema = require('./progress.model');
 //SCHEMA OF THE USER COLLECTION
 const userSchema = new Schema({
-    proceso: String, //cambiar
     name: String,
     mail: String,
     password: String,
     universityCode: Number,
-    programs: [{type: ObjectId, ref: programs}],
-    tickets: String
+    tickets: Number,
+    progress: {type: ObjectId, ref: ProgressSchema},
+    programs: [{type: ObjectId, ref: programs}]
+    
 });
 
 userSchema.methods.encryptPassword = (password) =>{

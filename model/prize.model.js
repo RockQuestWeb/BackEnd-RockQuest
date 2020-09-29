@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const {ObjectId} = require('mongoose');
 const {Schema} = mongoose;
 
 //SCHEMA OF THE PRIZE COLLECTION
