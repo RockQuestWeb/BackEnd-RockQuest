@@ -6,8 +6,7 @@ const Mission = require('./mission.model');
 //SCHEMA OF THE OBJECT COLLECTION
 const objectSchema = new Schema({
     name: String,
-    image: String,
-    mission: {Type: ObjectId, ref: Mission}
+    image: String
 });
 
 module.exports = mongoose.model('objects', objectSchema);

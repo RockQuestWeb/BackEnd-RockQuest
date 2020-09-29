@@ -40,6 +40,8 @@ programController.post = async function (req, res){
                 response.status(500).send({
                     message: 'SOME ERROR OCURRED WHEN INSERT A NEW PROGRAM'
                 });
+            }else {
+                res.send(response);
             }
         });
     } else{
