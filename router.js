@@ -1,4 +1,4 @@
-const router = require('express').Router();
+/*const router = require('express').Router();
 
 //CONTROLLER LIST
 const CategoryController = require('./controller/category.controller');
@@ -76,4 +76,4 @@ router.get('/user', UserController.getAll);
 router.get('/user/:userId', UserController.getOneById);
 router.post('/user', UserController.post);
 
-module.exports = router;
+module.exports = router;*/
