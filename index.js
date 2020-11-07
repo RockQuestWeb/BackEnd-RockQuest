@@ -17,6 +17,7 @@ var programRouter=require('./router/program');
 var progressRouter=require('./router/progress');
 var questRouter=require('./router/quest');
 var userRouter=require('./router/user');
+var galeryRouter=require('./router/image');
 
 require('./database/db.connection');
 
@@ -24,7 +25,7 @@ require('./database/db.connection');
 //middlewears
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false}));
 
 //MAIN ROUTE
 app.use('/achivement', achivementRouter);
@@ -39,6 +40,7 @@ app.use('/program', programRouter);
 app.use('/progress', progressRouter);
 app.use('/quest', questRouter);
 app.use('/user', userRouter);
+app.use('/image', galeryRouter);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
