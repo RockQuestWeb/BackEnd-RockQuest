@@ -36,6 +36,19 @@ userController.getOneById = async function(req, res) {
     }
 }
 
+userController.getOneByMail = async function(req, res){
+    try{
+        const mail = req.params.mail;
+        const data = await UserSchema.findOne({"mail": mail});
+        res.status(200).send(data);
+    }catch (err) {
+        console.log(err);
+        res.status(500).send({
+            message: 'SOME ERROR OCURRED'
+        });
+    }
+}
+
 //CREATE AND SAVE A NEW USER USER
 userController.post = async function(req, res) {
     if(req.body){
