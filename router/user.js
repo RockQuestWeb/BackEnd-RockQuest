@@ -6,6 +6,6 @@ const UserController = require('../controller/user.controller');
 router.get('/', UserController.getAll);
 router.get('/:userId', UserController.getOneById);
 router.post('/', UserController.post);
-router.get('mail/:mail', userController.getOneByMail);
+router.get('/mail/:mail', userController.getOneByMail);
 
 module.exports = router;
