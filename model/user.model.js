@@ -11,6 +11,7 @@ const userSchema = new Schema({
     password: String,
     universityCode: Number,
     tickets: Number,
+    rank: String,
     progress: {type: ObjectId, ref: ProgressSchema},
     programs: [{type: ObjectId, ref: programs}]
     
